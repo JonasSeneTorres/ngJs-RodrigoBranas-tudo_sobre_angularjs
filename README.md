@@ -1,6 +1,6 @@
 # ngJs-RodrigoBranas-tudo_sobre_angularjs
 
-Este é um estudo em cima das videoaulas do curso do Rodrigo Branas  - Tudo sobre AngularJS disponível em https://www.youtube.com/watch?v=_y7rKxqPoyg&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb&index=1
+Este é um estudo em cima das videoaulas do curso do Rodrigo Branas  - Tudo sobre AngularJS, disponível em https://www.youtube.com/watch?v=_y7rKxqPoyg&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb&index=1
 
 <!--
 ## Começando
