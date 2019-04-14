@@ -83,7 +83,7 @@ Nós usamos [SemVer] (http://semver.org/) para controle de versão. Para as vers
 -->
 ## Autor
 
-* ** Jonas Sene Torres **  <!-- - * Trabalho inicial * - [PurpleBooth] (https://github.com/PurpleBooth) -->
+**Jonas Sene Torres**  <!-- - * Trabalho inicial * - [PurpleBooth] (https://github.com/PurpleBooth) -->
 
 <!--
 Veja também a lista de [contribuidores] (https://github.com/your/project/contributors) que participaram deste projeto.
