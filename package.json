@@ -1,0 +1,19 @@
+{
+  "name": "ngjs-rodrigobranas-tudo_sobre_angularjs",
+  "version": "1.0.0",
+  "description": "Material desenvolvido em cima das videoaulas de Rodrigo Branas - Tudo sobre AngularJS. disponivel em https://www.youtube.com/watch?v=_y7rKxqPoyg&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb&index=1",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run http-server\" \"npm run json-server\"",
+    "http-server": "http-server -o -cors",
+    "json-server": "json-server --watch db.json --id nome",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonas Sene Torres",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "http-server": "^0.11.1",
+    "json-server": "^0.14.2"
+  }
+}
