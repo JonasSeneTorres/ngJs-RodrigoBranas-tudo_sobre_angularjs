@@ -2,6 +2,7 @@
 
 Este é um estudo em cima das videoaulas do curso do Rodrigo Branas  - Tudo sobre AngularJS disponível em https://www.youtube.com/watch?v=_y7rKxqPoyg&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb&index=1
 
+<!--
 ## Começando
 
 Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
@@ -13,7 +14,8 @@ O que você precisa para instalar o software e instalá-lo
 `` `
 Dar exemplos
 `` `
-
+-->
+<!--
 ### Instalando
 
 Uma série passo a passo de exemplos que informam como obter um env de desenvolvimento em execução
@@ -31,10 +33,12 @@ até terminar
 `` `
 
 Termine com um exemplo de obter alguns dados do sistema ou usá-los para uma pequena demonstração
-
+-->
+<!--
 ## Rodando os testes
 
 Explicar como executar os testes automatizados para este sistema
+
 
 ### Divida em testes de ponta a ponta
 
@@ -51,16 +55,17 @@ Explique o que esses testes testam e por que
 `` `
 Dê um exemplo
 `` `
-
+-->
+<!--
 ## Desdobramento, desenvolvimento
 
 Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
+-->
 ## construído com
 
-* [Node] (https://rometools.github.io/rome/) - usado para gerar feeds RSS
-* [AngularJS] (http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Bootstrap] (https://maven.apache.org/) - Gerenciamento de Dependência
+* [Node] (https://nodejs.org/en/) - plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis.
+* [AngularJS] (https://angularjs.org/) - Framework JavaScript código aberto, mantido pelo Google, que auxilia na execução de single-page applications.
+* [Bootstrap] (https://getbootstrap.com/) - Framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
 
 
 <!--
