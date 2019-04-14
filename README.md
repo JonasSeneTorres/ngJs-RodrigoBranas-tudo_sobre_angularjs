@@ -88,7 +88,7 @@ Nós usamos [SemVer] (http://semver.org/) para controle de versão. Para as vers
 <!--
 Veja também a lista de [contribuidores] (https://github.com/your/project/contributors) que participaram deste projeto.
 -->
-Licença ##
+## Licença
 
 Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md] (LICENSE.md) para obter detalhes
 
