@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="helloWorld">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World</title>
+    <script src="./angular.js"></script>
+    <script>
+        angular.module("helloWorld", []);
+        angular.module("helloWorld").controller("helloWorldCtrl", function($scope) {
+            $scope.message = 'Hello World';
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller="helloWorldCtrl">
+        {{ message }}
+    </div>
+</body>
+</html>

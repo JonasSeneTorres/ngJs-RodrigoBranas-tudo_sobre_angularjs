@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="listaTelefonica">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista Telefônica</title>
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="./lib/angular/angular.js"></script>
+    <script src="./lib/angular/angular-locale_pt-br.js"></script>
+    <script src="./lib/angular/angular-messages.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/listaTelefonicaCtrl.js"></script>
+    <script src="./js/services/contatosAPIService.js"></script>
+    <script src="./js/services/operadorasAPIService.js"></script>
+    <script src="./js/value/configValue.js"></script>
+</head>
+
+<body ng-controller="listaTelefonicaCtrl">
+    <div class="jumbotron">
+        <h3>{{ app }}</h3>
+        <input type="text" name="" id="" class="form-control" placeholder="O que você está buscando"
+            ng-model="criterioDeBusca.nome">
+        <table class="table table-striped" ng-show="contatos.length > 0">
+            <tr>
+                <th></th>
+                <th><a href="" ng-click="ordenarPor('nome')">nome</a></th>
+                <th><a href="" ng-click="ordenarPor('telefone')">telefone</a></th>
+                <th><a href="" ng-click="ordenarPor('operadora.nome')">operadora</a></th>
+                <th><a href="" ng-click="ordenarPor('data')">data</a></th>
+                <th></th>
+            </tr>
+            <tr ng-class="{'selecionado negrito': contato.selecionado}"
+                ng-repeat="contato in contatos | filter: criterioDeBusca : strict | orderBy: criterioDeOrdenacao: direcaoDaOrdenacao">
+                <td><input type="checkbox" ng-model="contato.selecionado" /></td>
+                <td>{{ contato.nome | uppercase }}</td>
+                <td>{{ contato.telefone }}</td>
+                <td>{{ contato.operadora.nome }}</td>
+                <td>{{ contato.data | date : 'dd/MM/yyyy HH:mm'}}</td>
+                <td>
+                    <div style="height: 20px; width: 20px;" ng-style="{'background-color': contato.cor}"></div>
+                </td>
+            </tr>
+        </table>
+
+        <hr ng-show="contatos.length > 0" />
+
+        <form name="contatoForm">
+            <input type="text" name="nome" class="form-control" placeholder="nome" ng-model="contato.nome"
+                ng-required="true" ng-minlength="3" />
+            <input type="text" name="telefone" class="form-control" placeholder="telefone" ng-model="contato.telefone"
+                ng-required="true" ng-pattern='/^\d{4,5}-\d{4}$/' />
+            <select class="form-control" name="operadora" ng-model="contato.operadora" ng-required="true"
+                ng-options="operadora.nome + ' (' + (operadora.preco | currency) + ')' group by operadora.categoria for operadora in operadoras | orderBy: 'nome'">
+                <option value="">Selecione uma operadora</option>
+            </select>
+
+            <div ng-messages="contatoForm.nome.$error"
+                ng-show="contatoForm.telefone.$invalid && contatoForm.nome.$dirty"" class=" alert alert-warning">
+                <span ng-message="required">
+                    Por favor preencha o campo nome.
+                </span>
+                <span ng-message="minlength" class="alert alert-warning">
+                    O campo nome deve ter pelo menos 3 caracteres.
+                </span>
+            </div>
+
+            <div ng-messages="contatoForm.telefone.$error"
+                ng-show="contatoForm.telefone.$invalid && contatoForm.telefone.$dirty"" class=" alert alert-warning">
+                <span ng-message="required">
+                    Por favor preencha o campo telefone.
+                </span>
+                <span ng-message="pattern">
+                    O campo telefone deve ter o formato X9999-9999, onde "X" é opcional.
+                </span>
+            </div>
+
+            <p class="alert alert-warning" ng-show="contatoForm.operadora.$invalid && contatoForm.operadora.$dirty">
+                Por favor preencha o campo operadora.
+            </p>
+
+            <button class="btn btn-primary btn-block" ng-click="adicionarContato(contato)"
+                ng-disabled="contatoForm.$invalid">
+                Adicionar Contato
+            </button>
+            <button class="btn btn-danger btn-block" ng-click="apagarContatos(contatos)"
+                ng-if="isContatoSelecionado(contatos)">
+                Excluir Contato
+            </button>
+        </form>
+
+        <br>{{ contato }}
+    </div>
+    <div ng-include="'./view/footer.html'"></div>
+</body>
+
+</html>
