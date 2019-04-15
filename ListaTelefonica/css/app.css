@@ -3,11 +3,15 @@
   margin: auto;
   margin-top: 24px;
   text-align: center;
-  width: 800px;
+  width: 100%;
 }
 
 .table {
   margin-top: 20px;
+}
+
+.table th{
+  text-align: center;
 }
 
 .selecionado,

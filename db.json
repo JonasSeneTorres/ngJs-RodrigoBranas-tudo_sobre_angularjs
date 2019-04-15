@@ -54,61 +54,6 @@
         "categoria": "Fixo"
       },
       "cor": "purple"
-    },
-    {
-      "nome": "Teste",
-      "telefone": "9999-9999",
-      "operadora": {
-        "nome": "Oi",
-        "codigo": 14,
-        "categoria": "Celular",
-        "preco": 2.3
-      },
-      "data": "2019-04-14T19:21:43.685Z"
-    },
-    {
-      "nome": "Teste2",
-      "telefone": "1111-1111",
-      "operadora": {
-        "nome": "GVT",
-        "codigo": 25,
-        "categoria": "Fixo",
-        "preco": 0.95
-      },
-      "data": "2019-04-14T19:23:55.504Z"
-    },
-    {
-      "nome": "teste3",
-      "telefone": "11111-1111",
-      "operadora": {
-        "nome": "Embratel",
-        "codigo": 21,
-        "categoria": "Fixo",
-        "preco": 1
-      },
-      "data": "2019-04-14T19:24:29.017Z"
-    },
-    {
-      "nome": "teste4",
-      "telefone": "1234-1234",
-      "operadora": {
-        "nome": "Embratel",
-        "codigo": 21,
-        "categoria": "Fixo",
-        "preco": 1
-      },
-      "data": "2019-04-14T20:11:53.116Z"
-    },
-    {
-      "nome": "teste5",
-      "telefone": "1234-4321",
-      "operadora": {
-        "nome": "GVT",
-        "codigo": 25,
-        "categoria": "Fixo",
-        "preco": 0.95
-      },
-      "data": "2019-04-14T20:14:00.539Z"
     }
   ],
   "operadoras": [
